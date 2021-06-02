@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A6E1EF"
+    tools:context="com.capstone.hlife.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:src="@drawable/hlife" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="H-Life"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="299dp"
+        android:background="#B4FFFFFF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btntransaksi"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/iconfood" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="Stok Makanan"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnstok"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/addfood" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="Entry Makanan"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnabout"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/ikonsaya" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="About"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/logout"
+                    android:onClick="exit"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/keluar" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="Keluar"
+                    android:textSize="23dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wpfood" />
+
+    </LinearLayout>
+
+</LinearLayout>

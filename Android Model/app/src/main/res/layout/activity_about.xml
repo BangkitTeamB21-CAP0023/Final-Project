@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.capstone.hlife.About">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#00BCD4">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#00BCD4">
+                        <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/hlife"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="About Hlife"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#000"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:text="Hlife is App that can be used to control the daily calorie consumption needed by the body, while maintaining an ideal body weight.
+"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="15dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Hlife Goals"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:text="1.To educate about healthy foods that are helping in maintaining ideal body weight.
+"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:text="2.To prevent various obesity-related diseases by helping users choose their healthy foods"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:text="3.To help recommend healthy and nutritious foods to maintain health and ideal body weight."
+            android:textColor="#000000"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="15dp"/>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
