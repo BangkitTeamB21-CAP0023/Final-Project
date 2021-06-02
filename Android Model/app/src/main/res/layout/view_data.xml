@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="1dp"
+    android:background="#ddd"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/dashboard">
+
+        <!-- Untuk menampilkan hapus,edit etc-->
+        <!-- Kode -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FF9800"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/r_kode"
+                android:layout_width="100dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:text="K001"
+                android:textStyle="italic"
+                android:textSize="20dp"/>
+            <ImageView
+                android:id="@+id/r_profil"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:src="@drawable/iconfood"/>
+            <TextView
+                android:id="@+id/r_nama"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Makanan"
+                android:textAlignment="center"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/r_satuan"
+                android:layout_width="100dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:text="Satuan" />
+            <TextView
+                android:id="@+id/r_jumlah"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/r_exp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="20-10-2010"
+                android:textAlignment="center"
+                android:textSize="12dp"/>
+            <TextView
+                android:id="@+id/r_hrg"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="15.000"
+                android:textAlignment="center"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"/>
+            <ImageButton
+                android:id="@+id/r_btnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:src="@drawable/ic_more" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Expired Date : "
+                                android:textSize="12dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Stok : "
+                                android:textSize="12dp"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Harga: "
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:paddingRight="7dp"
+                android:layout_marginBottom="10dp">
+                <Button
+                    android:id="@+id/btntambah_brg"
+                    android:layout_width="90dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/btn_addstok"
+                    android:textSize="10dp"
+                    android:text="Tambah Stok"
+                    android:textColor="#000"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
