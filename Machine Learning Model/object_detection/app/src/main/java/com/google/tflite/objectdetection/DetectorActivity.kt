@@ -220,10 +220,10 @@ class DetectorActivity : CameraActivity(), OnImageAvailableListener {
         private val LOGGER = Logger()
 
         // Configuration values for the prepackaged SSD model.
-        private val TF_OD_API_INPUT_SIZE = 300
+        private val TF_OD_API_INPUT_SIZE = 128
         private val TF_OD_API_IS_QUANTIZED = true
-        private val TF_OD_API_MODEL_FILE = "detect.tflite"
-        private val TF_OD_API_LABELS_FILE = "file:///android_asset/labelmap.txt"
+        private val TF_OD_API_MODEL_FILE = "food.tflite"
+        private val TF_OD_API_LABELS_FILE = "labels.txt"
         private val MODE = DetectorMode.TF_OD_API
         // Minimum detection confidence to track a detection.
         private val MINIMUM_CONFIDENCE_TF_OD_API = 0.5f
