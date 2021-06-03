@@ -36,7 +36,7 @@ public class RecordBarang extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_record_barang);
+        setContentView(R.layout.activity_record_makanan);
 
         //Setting action bar dengan judul dan tombol kembali
         actionBar = getSupportActionBar();

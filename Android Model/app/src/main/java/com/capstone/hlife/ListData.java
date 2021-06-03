@@ -30,7 +30,7 @@ public class ListData extends AppCompatActivity {
         setContentView(R.layout.activity_list_data);
 
         actionBar = getSupportActionBar();
-        actionBar.setTitle("Add Makanan");
+        actionBar.setTitle("MakananKu");
 
         //Tombol Kembali
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

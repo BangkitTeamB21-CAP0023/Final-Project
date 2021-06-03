@@ -34,7 +34,7 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.HolderRecord> {
     @Override
     public HolderRecord onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //inflate record
-        View view = LayoutInflater.from(context).inflate(R.layout.view_transaksi, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.view_ubah, parent, false);
 
 
         return new HolderRecord(view);
