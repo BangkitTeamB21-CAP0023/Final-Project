@@ -19,7 +19,10 @@
         <activity android:name="com.capstone.hlife.ListData" />
         <activity android:name="com.capstone.hlife.About" />
         <activity android:name="com.capstone.hlife.Transaksi" />
-        <activity android:name="com.capstone.hlife.MainActivity">
+        <activity android:name="com.capstone.hlife.MainActivity"/>
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
