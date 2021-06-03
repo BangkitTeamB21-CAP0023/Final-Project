@@ -109,7 +109,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.HolderRecord> {
             }
         });
 
-        //Menangani Tombol Tambah barang
+        //Menangani Tombol Tambah ,akanan
         holder.btntambah_brg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,7 +117,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.HolderRecord> {
                 intent.putExtra("KODE", kode);
                 intent.putExtra("Tambah", "tambah");
                 context.startActivity(intent);
-                Toast.makeText(context, "Tambah Barang", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Tambah Makanan", Toast.LENGTH_SHORT).show();
 
             }
         });
