@@ -6,7 +6,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class SplashScreen : AppCompatActivity() {
-    private val animateDuration: Long = 1500
+    private val animateDuration: Long = 3000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
