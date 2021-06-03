@@ -18,7 +18,7 @@
             android:clipToPadding="false"
             android:paddingBottom="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/view_transaksi" />
+            tools:listitem="@layout/view_ubah" />
     </LinearLayout>
 
 </RelativeLayout>

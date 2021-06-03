@@ -107,7 +107,7 @@ public class AddEdit extends AppCompatActivity {
         }
         else{
             //tambah data
-            actionBar.setTitle("Tambah Barang");
+            actionBar.setTitle("Tambah Makanan Favoritmu");
         }
 
         //init db helper

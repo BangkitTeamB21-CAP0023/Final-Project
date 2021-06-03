@@ -24,7 +24,7 @@ public class Transaksi extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transaksi);
+        setContentView(R.layout.activity_ubah);
 
         actionBar = getSupportActionBar();
         actionBar.setTitle("Data Makananku");
