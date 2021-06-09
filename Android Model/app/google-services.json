@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "869106483218",
+    "project_id": "hlife-da80b",
+    "storage_bucket": "hlife-da80b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869106483218:android:cccb5333dcd2cc314c98cb",
+        "android_client_info": {
+          "package_name": "com.capstonebangkit.hlife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869106483218-58vtrqqsico7psb58fq60gt9vctpdfnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaRbUKvx0Nt9m4t2MJFYxl-URtPzyoYyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869106483218-58vtrqqsico7psb58fq60gt9vctpdfnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
