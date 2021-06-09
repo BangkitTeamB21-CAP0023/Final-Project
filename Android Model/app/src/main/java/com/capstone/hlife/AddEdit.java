@@ -19,6 +19,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.blogspot.atifsoftwares.circularimageview.CircularImageView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -49,6 +51,10 @@ public class AddEdit extends AppCompatActivity {
     //actionbar
     private ActionBar actionBar;
 
+    Model model;
+
+    DatabaseReference reference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +80,8 @@ public class AddEdit extends AppCompatActivity {
         edtHrg = findViewById(R.id.edtKlr);
         btnSimpan = findViewById(R.id.btnSimpan);
         btnCencel= findViewById(R.id.btnCencel);
+
+
 
         //get data dari intent
         Intent intent = getIntent();
@@ -113,6 +121,8 @@ public class AddEdit extends AppCompatActivity {
         //init db helper
         dbHelper = new DataHelper(this);
 
+
+
         //klik image view untuk menampilkan dialog gambar
         profilIv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,12 +133,22 @@ public class AddEdit extends AppCompatActivity {
                         new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                         STORAGE_REQUEST_CODE
                 );
+
+
+
+
             }
         });
         //klik btntambah untuk menyimpan data setelah itu data di set kosong/default
+
+        reference = FirebaseDatabase.getInstance().getReference().child("menu");
+
+
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 inputData();
 
                 edtKode.setText("");
@@ -139,7 +159,12 @@ public class AddEdit extends AppCompatActivity {
                 edtHrg.setText("");
                 profilIv.setImageResource(R.drawable.pic);
                 edtKode.requestFocus();
+
+
+
             }
+
+
         });
         btnCencel.setOnClickListener(new View.OnClickListener() {
             @Override
