@@ -35,7 +35,7 @@ public class RecordData extends AppCompatActivity {
 
         //Setting action bar dengan judul dan tombol kembali
         actionBar = getSupportActionBar();
-        actionBar.setTitle("Detail Barang");
+        actionBar.setTitle("Detail");
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -100,6 +100,7 @@ public class RecordData extends AppCompatActivity {
                 hrg.setText(hrg1);
                 addedTime.setText(timeAdded);
                 updatedTime.setText(timeUpdated);
+
                 Bitmap bitmap = BitmapFactory.decodeByteArray(gambar, 0, gambar.length);
 
                 //Jika user tidak melampirkan gambar maka gambar akan null, jadi dalam kasus ini harus di set default

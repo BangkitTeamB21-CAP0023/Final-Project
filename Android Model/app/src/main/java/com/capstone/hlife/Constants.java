@@ -2,11 +2,11 @@ package com.capstone.hlife;
 
 public class Constants {
     //Nama Database
-    public static final String DB_NAME = "SPAREPART";
+    public static final String DB_NAME = "HLIFE";
     //Versi Database
     public static final int DB_VERSION = 1;
     //Nama Tabel
-    public static final String TB_NAME = "SPAREPART";
+    public static final String TB_NAME = "HLIFE";
 
     //kolom
     public static final String K_KODE = "kode";

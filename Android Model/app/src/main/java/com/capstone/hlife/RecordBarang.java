@@ -15,13 +15,18 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.capstone.hlife.Constants.K_JUMLAH;
+import static com.capstone.hlife.Constants.K_KODE;
+import static com.capstone.hlife.Constants.K_NAMA;
+import static com.capstone.hlife.Constants.TB_NAME;
+
 public class RecordBarang extends AppCompatActivity {
     //views
     private TextView bio,kode, nama, satuan, jumlah, exp, hrg, addedTime, updatedTime, Judul, shop;
     private ImageView imageView, profilIv;
-    private Button angka,tambah,kurang, btnok, btnCencel;
+    private Button angka,tambah,kurang, btnok, btnCencel,btnDelete;
     int count;
-    String kode1;
+    String kode1,value;
 
     //set pilihan(boolean)
     public boolean ShopMode = false;
@@ -40,7 +45,7 @@ public class RecordBarang extends AppCompatActivity {
 
         //Setting action bar dengan judul dan tombol kembali
         actionBar = getSupportActionBar();
-        actionBar.setTitle("Ubah Barang");
+        actionBar.setTitle("Ubah");
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -70,6 +75,7 @@ public class RecordBarang extends AppCompatActivity {
         btnCencel = findViewById(R.id.btnCencel);
         Judul = findViewById(R.id.Judul);
         shop = findViewById(R.id.shop);
+        btnDelete =  findViewById(R.id.btnDelete);
 
         //get data dari intent
         Intent intent1 = getIntent();
@@ -127,13 +133,24 @@ public class RecordBarang extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hapusData(value );
+                Toast.makeText(RecordBarang.this, "Makanan Berhasil di hapus", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(RecordBarang.this,MainActivity.class);
+                finish();
+
+            }
+        });
     }
 
     private void showRecordDeatils() {
         //get record deatils
 
         //query untuk memilih record berdasarkan id
-        String selectQuery = "SELECT * FROM " +Constants.TB_NAME+ " WHERE " +Constants.K_KODE+ " =\"" +recordID+ "\"";
+        String selectQuery = "SELECT * FROM " + TB_NAME+ " WHERE " +Constants.K_KODE+ " =\"" +recordID+ "\"";
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -181,7 +198,7 @@ public class RecordBarang extends AppCompatActivity {
         db.close();*/
 
         //query untuk menambah jumlah
-        String sql = "UPDATE " +Constants.TB_NAME+ " SET " +Constants.K_JUMLAH+ " = "+Constants.K_JUMLAH+" + "
+        String sql = "UPDATE " + TB_NAME+ " SET " +Constants.K_JUMLAH+ " = "+Constants.K_JUMLAH+" + "
                 +Integer.parseInt((String) angka.getText()) +" WHERE "+Constants.K_KODE+ " =\"" +recordID+ "\"";
         db.execSQL(sql);
         db.close();
@@ -189,7 +206,7 @@ public class RecordBarang extends AppCompatActivity {
     private void kurangjumlah(String kode1) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         //query untuk mengurangi jumlah
-        String sql = "UPDATE " +Constants.TB_NAME+ " SET "+Constants.K_JUMLAH+ " = CASE " +
+        String sql = "UPDATE " + TB_NAME+ " SET "+Constants.K_JUMLAH+ " = CASE " +
                 "WHEN "+Constants.K_JUMLAH+" > "+Integer.parseInt((String) angka.getText())+" THEN "
                 +Constants.K_JUMLAH+" - " +Integer.parseInt((String) angka.getText())+
                 " WHEN "+Constants.K_JUMLAH+" = "+Integer.parseInt((String) angka.getText())+" THEN "
@@ -199,6 +216,15 @@ public class RecordBarang extends AppCompatActivity {
         db.execSQL(sql);
         db.close();
     }
+
+    public void hapusData(String value){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+//        db.delete(TB_NAME, Constants.K_KODE + " = ?", new String[]{String.valueOf(name)});
+//        db.close();
+        db.execSQL("delete from "+ TB_NAME );
+        db.close();
+    }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();//get activity sebelumnya

@@ -213,9 +213,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@drawable/btn_addstok"
-                        android:text="Ubah"
+                        android:text="PERBARUI"
                         android:textSize="13dp"
-                        android:layout_marginRight="5dp"
                         android:textColor="#fff"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"/>
@@ -224,8 +223,19 @@
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:background="@drawable/btn_addstok"
+                        android:background="#FF9800"
                         android:text="Batal"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="13dp"
+                        android:textColor="#fff"/>
+                    <Button
+                        android:id="@+id/btnDelete"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#F44336"
+                        android:text="HAPUS"
                         android:textSize="13dp"
                         android:textColor="#fff"/>
                 </LinearLayout>
